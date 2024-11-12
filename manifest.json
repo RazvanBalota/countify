@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Countify",
+  "description": "Instantly see the character count of any selected text. Just highlight, right-click, and let Countify do the rest.",
+  "version": "1.0",
+  "permissions": ["contextMenus"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "32": "assets/counting_32.png",
+    "128": "assets/counting_128.png"
+  }
+}
